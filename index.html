@@ -3,112 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/f2630b5e81.js" crossorigin="anonymous"></script>
-    <title>Form Validation</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="C:\Users\MANSI\AppData\Local\Temp\b2ee5059-f39c-46d8-b480-84fd9f548257_favicon_io (1).zip.257\apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/c:\Users\MANSI\AppData\Local\Temp\7c22a134-1720-4d75-8fee-dd885e6ac9c3_favicon_io (1).zip.9c3\favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="c:\Users\MANSI\AppData\Local\Temp\7a37ffb6-e4d7-4767-86df-24c20cce7460_favicon_io (1).zip.460\favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-<!--linking CSS file-->
-    <link rel="stylesheet" href="/form2.css">
+    <meta name="description" content="EduEase registration form with client-side JavaScript validation.">
+    <title>EduEase | Create Your Account</title>
+    <link rel="stylesheet" href="form2.css">
 </head>
-<body>
-    <!--Create a section-->
-    <section class="main-section">
-        <!--Create a parent div-->
-        <div class="main-text">
-          <h1>Welcome to EduEase</h1>
-          <p>EduEase is your ultimate teaching companion designed to revolutionize the way you learn and teach. Whether you're an educator seeking to enhance your teaching methods or a student looking to master new skills, EduEase provides a dynamic, interactive, and user-friendly platform to support your educational needs. To join our community please fill the form given below...</p>
-          </div>
-          </section>
-    <!--creating a container-->
-    <section class="form-container">
-        <!--form-heading-->
-    <h2 class="form-heading" >Get Started</h2>
-        <!--creating a form-->
-        <form id="registrationForm">
-            <!--name div-->
-            <div class="form-group">
-                <label for="fullName">Full Name</label>
-                <div class="input-container">
-                    <i class="fa-solid fa-user"></i>
-                    <input type="text" id="fullName" required>
-                </div>
-                <div id="nameError" class="text-error"></div>
-            </div>
-            <!--email div-->
-            <div class="form-group">
-                <label for="email">Email Id</label>
-                <div class="input-container">
-                    <i class="fa-solid fa-envelope"></i>
-                    <input type="email" id="email" required>
-                </div>
-                <div id="emailError" class="text-error"></div>
-            </div>
-            <!--phone number div-->
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <div class="input-container">
-                    <i class="fa-solid fa-phone"></i>
-                    <input type="text" id="phone" required>
-                </div>
-                <div id="phoneError" class="text-error"></div>
-            </div>
-            <!--password div-->
-            <div class="form-group">
-                <label for="password">Password</label>
-                <div class="input-container">
-                    <i class="fa-solid fa-key"></i>
-                    <input type="password" id="password" required>
-                </div>
-                <div id="passwordError" class="text-error"></div>
-            </div>
-            <!--confirm password div-->
-            <div class="form-group">
-                <label for="confirmPassword">Confirm Password</label>
-                <div class="input-container">
-                    <i class="fa-solid fa-lock"></i>
-                    <input type="password" id="confirmPassword" required>
-                </div>
-                <div id="confirmPasswordError" class="text-error"></div>
-            </div>
-            <button type="submit" class="btn btn-primary">On Submit</button>
-            <button type="button" id="OnChange" class="btn btn-secondary">On Change</button>
-        </form>
-    </section>
-    <!--giving a heading-->
-    <h1 class="about-heading" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(38, 81, 83);text-decoration: underline; font-style: italic;">EduEase</h1>
-    <!--Create another section-->
-    <section class="about-section">
-        <!--Create another div-->
-        <div class="about-us">
-            <p>
-                Experience the future of learning with EduEase—India's largest platform dedicated to making education accessible for everyone. Join us in revolutionizing education and unlock your potential today!
-            </p>
-            <br>
-            <h3 style="text-decoration:underline ;">Reach out to us</h3>
-            <p>
-                Get your questions answered about learning with Unacademy.
-            </p>
-            <p style="font-weight: 900;">
-                <i class="fa-solid fa-phone"></i>Call 6302965532.
-            </p><br>
-            </div>
-    <!--Create another div in the same section-->
-        <div class="provide" align="center"> 
-            <h3>We provide:</h3>
-            <!--Creating an unordered list-->
-            <ul>
-                <li><i class="fa-solid fa-users"></i>Doubt clearing sessions</li>
-                <li><i class="fa-solid fa-chalkboard"></i>Online and offline coaching</li>
-                <li><i class="fa-solid fa-pen"></i>Weekly tests</li>
-                <li><i class="fa-solid fa-chart-line"></i>Progress tracker</li>
-                <li><i class="fa-solid fa-trophy"></i>Certificates</li>
-            </ul>
-        </div>
-    </section>
 
-    <!--linking JS file-->
-    <script src="/form3.js"></script>
+<body>
+    <div class="page-shell">
+        <header class="hero">
+            <nav class="navbar" aria-label="Main navigation">
+                <a class="brand" href="#" aria-label="EduEase home">
+                    <span class="brand-mark">E</span>
+                    <span>EduEase</span>
+                </a>
+
+                <a class="nav-link" href="#registration">Get Started</a>
+            </nav>
+
+            <div class="hero-content">
+                <div class="hero-copy">
+                    <span class="eyebrow">LEARN • GROW • ACHIEVE</span>
+                    <h1>Build better learning habits with EduEase.</h1>
+                    <p>
+                        Create your account and take the first step toward a more
+                        organized, engaging, and personalized learning experience.
+                    </p>
+
+                    <div class="hero-points">
+                        <span>✓ Personalized learning</span>
+                        <span>✓ Progress tracking</span>
+                        <span>✓ Practice & assessments</span>
+                    </div>
+                </div>
+
+                <div class="hero-card" aria-hidden="true">
+                    <div class="floating-card card-one">
+                        <span class="mini-icon">✓</span>
+                        <div>
+                            <strong>Stay on track</strong>
+                            <small>Track your progress</small>
+                        </div>
+                    </div>
+
+                    <div class="study-illustration">
+                        <div class="illustration-circle"></div>
+                        <div class="book">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="laptop">
+                            <div class="laptop-screen">
+                                <div class="screen-line"></div>
+                                <div class="screen-line short"></div>
+                                <div class="screen-chart"></div>
+                            </div>
+                            <div class="laptop-base"></div>
+                        </div>
+                    </div>
+
+                    <div class="floating-card card-two">
+                        <span class="mini-icon">★</span>
+                        <div>
+                            <strong>Keep learning</strong>
+                            <small>Small steps matter</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="registration-section" id="registration">
+                <div class="section-heading">
+                    <span class="eyebrow">CREATE YOUR ACCOUNT</span>
+                    <h2>Ready to get started?</h2>
+                    <p>Fill in your details below. We'll validate each field as you go.</p>
+                </div>
+
+                <div class="registration-layout">
+                    <aside class="benefits-card">
+                        <span class="benefits-icon">E</span>
+                        <h3>Everything in one place.</h3>
+                        <p>
+                            EduEase is designed as a simple learning companion for
+                            students who want to stay organized and keep improving.
+                        </p>
+
+                        <ul>
+                            <li><span>✓</span> Learning resources</li>
+                            <li><span>✓</span> Progress tracking</li>
+                            <li><span>✓</span> Weekly assessments</li>
+                            <li><span>✓</span> Goal-focused learning</li>
+                        </ul>
+                    </aside>
+
+                    <div class="form-card">
+                        <form id="registrationForm" novalidate>
+                            <div class="form-grid">
+                                <div class="form-group full-width">
+                                    <label for="fullName">Full Name</label>
+                                    <div class="input-wrap">
+                                        <span class="field-icon" aria-hidden="true">👤</span>
+                                        <input
+                                            type="text"
+                                            id="fullName"
+                                            name="fullName"
+                                            autocomplete="name"
+                                            placeholder="Enter your full name"
+                                            minlength="5"
+                                            required
+                                            aria-describedby="nameError"
+                                        >
+                                    </div>
+                                    <p class="field-message" id="nameError" aria-live="polite"></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <div class="input-wrap">
+                                        <span class="field-icon" aria-hidden="true">✉</span>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            autocomplete="email"
+                                            placeholder="you@example.com"
+                                            required
+                                            aria-describedby="emailError"
+                                        >
+                                    </div>
+                                    <p class="field-message" id="emailError" aria-live="polite"></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <div class="input-wrap">
+                                        <span class="field-icon" aria-hidden="true">☎</span>
+                                        <input
+                                            type="tel"
+                                            id="phone"
+                                            name="phone"
+                                            autocomplete="tel"
+                                            placeholder="10-digit number"
+                                            inputmode="numeric"
+                                            maxlength="10"
+                                            required
+                                            aria-describedby="phoneError"
+                                        >
+                                    </div>
+                                    <p class="field-message" id="phoneError" aria-live="polite"></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <div class="input-wrap">
+                                        <span class="field-icon" aria-hidden="true">🔒</span>
+                                        <input
+                                            type="password"
+                                            id="password"
+                                            name="password"
+                                            autocomplete="new-password"
+                                            placeholder="Create a strong password"
+                                            minlength="8"
+                                            required
+                                            aria-describedby="passwordError passwordHint"
+                                        >
+                                        <button
+                                            type="button"
+                                            class="toggle-password"
+                                            data-target="password"
+                                            aria-label="Show password"
+                                        >Show</button>
+                                    </div>
+                                    <div class="strength" aria-hidden="true">
+                                        <div class="strength-track">
+                                            <span id="strengthBar"></span>
+                                        </div>
+                                        <span id="strengthText">Password strength</span>
+                                    </div>
+                                    <p class="password-hint" id="passwordHint">
+                                        Use 8+ characters with uppercase, lowercase, and a number.
+                                    </p>
+                                    <p class="field-message" id="passwordError" aria-live="polite"></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirm Password</label>
+                                    <div class="input-wrap">
+                                        <span class="field-icon" aria-hidden="true">🔐</span>
+                                        <input
+                                            type="password"
+                                            id="confirmPassword"
+                                            name="confirmPassword"
+                                            autocomplete="new-password"
+                                            placeholder="Re-enter your password"
+                                            required
+                                            aria-describedby="confirmPasswordError"
+                                        >
+                                        <button
+                                            type="button"
+                                            class="toggle-password"
+                                            data-target="confirmPassword"
+                                            aria-label="Show password"
+                                        >Show</button>
+                                    </div>
+                                    <p class="field-message" id="confirmPasswordError" aria-live="polite"></p>
+                                </div>
+                            </div>
+
+                            <label class="terms">
+                                <input type="checkbox" id="terms" name="terms">
+                                <span>I agree to the terms and understand that this is a frontend demo.</span>
+                            </label>
+                            <p class="field-message" id="termsError" aria-live="polite"></p>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">
+                                    Create Account
+                                </button>
+                                <button type="reset" class="btn btn-secondary" id="resetButton">
+                                    Reset
+                                </button>
+                            </div>
+
+                            <div class="success-message" id="successMessage" role="status" aria-live="polite">
+                                <strong>Registration successful!</strong>
+                                <span>Your details passed the client-side validation.</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features-section">
+                <div class="section-heading compact">
+                    <span class="eyebrow">WHY EDU EASE?</span>
+                    <h2>Designed for consistent progress.</h2>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <span class="feature-icon">01</span>
+                        <h3>Learn</h3>
+                        <p>Keep your learning resources organized and easy to access.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <span class="feature-icon">02</span>
+                        <h3>Practice</h3>
+                        <p>Use regular assessments to reinforce concepts and identify gaps.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <span class="feature-icon">03</span>
+                        <h3>Improve</h3>
+                        <p>Track progress and turn small improvements into consistent habits.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div>
+                <strong>EduEase</strong>
+                <span>Learning made simpler.</span>
+            </div>
+            <span>Frontend Form Validation Project</span>
+        </footer>
+    </div>
+
+    <script src="form3.js"></script>
 </body>
 </html>
