@@ -122,6 +122,10 @@ For a better development experience, open the folder in VS Code and use the Live
   <img src="assets/features.png" alt="EduEase Learning Features Section" width="850">
 </div>
 
+## 🌐 Live Demo
+
+👉 [View Live EduEase](https://this-is-my-form-validation.netlify.app/)
+
 ## 🧠 What I Learned
 
 This project helped me practice:
