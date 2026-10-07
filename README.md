@@ -40,7 +40,9 @@ The project focuses on client-side form validation, responsive UI design, user f
 form-validation/
 │
 ├── assets/
+│   └── hero.png
 │   └── form-validation.png
+│   └── features.png
 │
 ├── index.html
 ├── form2.css
